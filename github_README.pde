@@ -11,20 +11,29 @@ void setup() {
   background(255);
   fill(0);
 
-  strs[0][0] = "Hey there!";
-  strs[0][1] = "My name is Bao Truc.";
+  // Slide 1: Giới thiệu tên
+  strs[0][0] = "Hello, world!";
+  strs[0][1] = "My name is Nguyen Ngoc Bao Truc.";
 
-  strs[1][0] = "I'm a Management Information Systems Major";
-  strs[1][1] = "at Ho Chi Minh city of Banking University.";
+  // Slide 2: Ngành học và nơi ở
+  strs[1][0] = "I'm a Management Information Systems student";
+  strs[1][1] = "based in Ho Chi Minh City, Vietnam.";
 
-  strs[2][0] = "I've been teaching myself how to code for 2 years!";
-  strs[2][1] = "I am fluent in Python and HTML & CSS.";
+  // Slide 3: Kỹ năng chuyên môn
+  strs[2][0] = "I specialize in UI/UX Design & Web Development.";
+  strs[2][1] = "I work with Figma, Laravel, PHP, and MySQL.";
 
-  strs[3][0] = "I've created website and art using what I've learned.";
-  strs[3][1] = "You can even find the Processing source code for this below!";
+  // Slide 4: Điểm mạnh (AI & System Logic)
+  strs[3][0] = "I love combining system logic with visual hierarchy,";
+  strs[3][1] = "and leveraging AI tools to accelerate design workflows.";
 
+  // Slide 5: Lời mời xem Portfolio/GitHub (Đã thêm phần bị thiếu để tránh lỗi)
+  strs[4][0] = "I've created music platforms and digital assets.";
+  strs[4][1] = "You can find my projects right here on my GitHub!";
+
+  // Slide 6: Thông tin liên hệ
   strs[5][0] = "Feel free to reach out to say hi!";
-  strs[5][1] = "phone: 0966617581 | email: baotruc272@gmail.com";
+  strs[5][1] = "Phone: 0966617581 | Email: baotruc272@gmail.com";
 }
 
 int i = 0;
@@ -40,6 +49,7 @@ void draw() {
 
   if (s < strs.length) {
     if ((strs[s][0].length() >= i || strs[s][1].length() >= i) && !delete) {
+      // Typing effect
       if (strs[s][0].length() >= i) {
         textSize(mainFontSize);
         text(strs[s][0].substring(0, i), width/2, height/2 - offset);
@@ -47,6 +57,7 @@ void draw() {
         textSize(mainFontSize);
         text(strs[s][0], width/2, height/2 - offset);
       }
+      
       if (strs[s][1].length() >= i) {
         textSize(secondaryFontSize);
         text(strs[s][1].substring(0, i), width/2, height/2 + offset);
@@ -56,15 +67,15 @@ void draw() {
       }
       i++;
     } else {
+      // Pause before deleting
       if (!delete) {
         delay(1500);
       }
       delete = true;
     }
 
-
+    // Deleting effect
     if (delete) {
-
       if (i > 0) {
         if (i < strs[s][0].length()) {
           textSize(mainFontSize);
@@ -73,6 +84,7 @@ void draw() {
           textSize(mainFontSize);
           text(strs[s][0], width/2, height/2 - offset);
         }
+        
         if (i < strs[s][1].length()) {
           textSize(secondaryFontSize);
           text(strs[s][1].substring(0, i - 1), width/2, height/2 + offset);
@@ -82,11 +94,10 @@ void draw() {
         }
         i--;
       } else {
+        // Move to next string
         delete = false;
         s++;
       }
     }
-    //print(i + " ");
-    //s++;
   }
 }
