@@ -1,1 +1,1 @@
-<img src="<img src="./output.gif" alt="Here is a little bit about me!">" alt="Here is a little bit about me!">
+<img src="./output.gif" alt="Here is a little bit about me!">
