@@ -33,7 +33,7 @@ void setup() {
 
   // Slide 6: Thông tin liên hệ
   strs[5][0] = "Feel free to reach out to say hi!";
-  strs[5][1] = "Phone: 0966617581 | Email: baotruc272@gmail.com";
+  strs[5][1] = "Phone: 0966617581 | Email: truc6560@gmail.com";
 }
 
 int i = 0;
