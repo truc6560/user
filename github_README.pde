@@ -13,7 +13,7 @@ void setup() {
 
   // Slide 1: Giới thiệu tên
   strs[0][0] = "Hello, world!";
-  strs[0][1] = "My name is Nguyen Ngoc Bao Truc.";
+  strs[0][1] = "My name is Bao Truc.";
 
   // Slide 2: Ngành học và nơi ở
   strs[1][0] = "I'm a Management Information Systems student";
@@ -21,7 +21,7 @@ void setup() {
 
   // Slide 3: Kỹ năng chuyên môn
   strs[2][0] = "I specialize in UI/UX Design & Web Development.";
-  strs[2][1] = "I work with Figma, Laravel, PHP, and MySQL.";
+  strs[2][1] = "I work with Figma, Laravel, PHP, CSS, HTML, Javascript and MySQL.";
 
   // Slide 4: Điểm mạnh (AI & System Logic)
   strs[3][0] = "I love combining system logic with visual hierarchy,";
